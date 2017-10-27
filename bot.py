@@ -5,7 +5,7 @@ token = os.environ['BOT_TOKEN']
 
 bot = telebot.TeleBot(token)
 
-@bot.message_handler()
+@bot.message_handler(content_types=['text'])
 def handle_message(m):
 	bot.send_message(m.chat.id, "Хуй")
 
